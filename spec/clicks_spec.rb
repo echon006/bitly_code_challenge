@@ -1,7 +1,8 @@
+require './lib/clicks.rb'
 require 'json'
 
 
-RSpec.describe 'Paresed json file' do
+RSpec.describe Click do
 
   before :each do
     @json_file = File.read('./data/decodes.json')
@@ -19,4 +20,8 @@ RSpec.describe 'Paresed json file' do
     expect(@data_hash[0]["timestamp"]).to be_a(String)
   end
 
+  it "returns a collection of clicks made in 2021" do
+    expect(Click.clicks_in_2021).to be_an(Array)
+    expect(Click.clicks_in_2021.count).to eq(5082)
+  end
 end

@@ -2,7 +2,6 @@ require './lib/users.rb'
 require 'csv'
 require 'json'
 
-
 RSpec.describe User do
 
   before :each do
@@ -24,7 +23,7 @@ RSpec.describe User do
       expect(@user_1.domain).to eq('bit.ly')
       expect(@user_1.hash).to eq('31Tt55y')
     end
-  end
 
-  
+
+  end
 end

@@ -1,5 +1,5 @@
 class User
-  attr_reader :long_url, :domain, :hash
+  attr_reader :long_url, :domain, :hash, :count
 
   def initialize(data)
     @long_url = data['long_url']
